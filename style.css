@@ -47,10 +47,17 @@ body {
 }
 
 
-.button-container {
-  margin-top: 15px;
-  display: flex;
-  justify-content: space-between;
+.time {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1rem 1rem;
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 200;
+  color:rgba(121,121,121, 0.98);
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
 }
 
 button {
@@ -86,6 +93,20 @@ button:active {
   font-size: 1.5rem;
 }
 
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #333;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /* Media Query: Tablet or smaller*/ 
 @media screen and (max-width: 1000px) {
   .quote-container{
@@ -93,5 +114,9 @@ button:active {
   }
   .quote-text{
     font-size: 2.5rem;
+  }
+
+  .time{
+    font-size: 1rem;
   }
 }
