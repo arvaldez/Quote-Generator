@@ -25,7 +25,11 @@ function setCurrentTime() {
     let hours = dateTime.getHours();
     let mins = dateTime.getMinutes();
     let AMorPM = "AM";
-    
+
+    if(mins < 10) {
+        mins = "0" + mins;
+    }
+
 
     if(hours === 0) {
         hours = 12;
